@@ -1,5 +1,7 @@
 # Go Cinema API
 
+Nama : Dimas AKmal Widi Pradana
+
 ## A. System Design Test
 
 ### 1️⃣ Flowchart Sistem
