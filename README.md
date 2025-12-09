@@ -1,10 +1,12 @@
 # Go Cinema API
 
+Nama : Dimas AKmal Widi Pradana
+
 ## A. System Design Test
 
 ### 1️⃣ Flowchart Sistem
 
-![Flowchart Sistem](assets/flowchart-bioskop.png)
+![Flowchart Sistem](./assets/flowchart-bioskop.jpg)
 
 ### 2️⃣ Pemilihan Kursi, Restok Tiket & Refund
 
@@ -43,7 +45,7 @@
 
 ### 1️⃣ ERD / Database Schema
 
-![ERD Database](assets/erd-bioskop.png)
+![ERD Database](./assets/erd-bioskop.jpg)
 
 ---
 
@@ -52,7 +54,7 @@
 ### 1️⃣ Clone Project
 
 ```bash
-git clone https://github.com/username/go-cinema-api.git
+git clone https://github.com/dimasawp/go-cinema-api.git
 cd go-cinema-api
 ```
 
@@ -84,4 +86,4 @@ Endpoint tersedia:
 
 Untuk memudahkan testing API, silakan download dan import file Postman Collection berikut:
 
-[Download Postman Collection](assets/go-cinema-api.postman_collection.json)
+[Download Postman Collection](./assets/go-cinema-api.postman_collection.json)
