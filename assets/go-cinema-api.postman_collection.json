@@ -1,0 +1,444 @@
+{
+	"info": {
+		"_postman_id": "ab37508f-d456-4776-8756-94553d471ca0",
+		"name": "go-cinema-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "40415787"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"email\": \"dimas@test.com\",\r\n  \"password\": \"password123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Login",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"email\": \"dimas@test.com\",\r\n  \"password\": \"password123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"login"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Dec 2025 09:49:43 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "155"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU1MzI5ODMsInVzZXJfaWQiOjF9.Bpdq1pxE0P_4F24oz6Pe5PNJ40GWSAwn4757Y47WM4w\",\n    \"user\": \"Dimas Akmal\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Get Showtimes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU1MzI5ODMsInVzZXJfaWQiOjF9.Bpdq1pxE0P_4F24oz6Pe5PNJ40GWSAwn4757Y47WM4w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/showtimes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"showtimes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Showtimes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU1MzI5ODMsInVzZXJfaWQiOjF9.Bpdq1pxE0P_4F24oz6Pe5PNJ40GWSAwn4757Y47WM4w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "http://localhost:8080/showtimes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"showtimes"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Dec 2025 09:54:27 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "258"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": 1,\n        \"movie_id\": 1,\n        \"auditorium_id\": 1,\n        \"start_time\": \"2025-12-09T14:00:00Z\",\n        \"end_time\": \"2025-12-09T17:01:00Z\",\n        \"status\": \"active\"\n    },\n    {\n        \"id\": 2,\n        \"movie_id\": 2,\n        \"auditorium_id\": 2,\n        \"start_time\": \"2025-12-09T18:00:00Z\",\n        \"end_time\": \"2025-12-09T20:28:00Z\",\n        \"status\": \"active\"\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Post Showtimes",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU1MzI5ODMsInVzZXJfaWQiOjF9.Bpdq1pxE0P_4F24oz6Pe5PNJ40GWSAwn4757Y47WM4w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"movie_id\": 1,\r\n  \"auditorium_id\": 1,\r\n  \"start_time\": \"2025-12-09T18:00:00Z\",\r\n  \"end_time\": \"2025-12-09T21:00:00Z\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/showtimes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"showtimes"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Post Showtimes",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU1MzI5ODMsInVzZXJfaWQiOjF9.Bpdq1pxE0P_4F24oz6Pe5PNJ40GWSAwn4757Y47WM4w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"movie_id\": 1,\r\n  \"auditorium_id\": 1,\r\n  \"start_time\": \"2025-12-09T18:00:00Z\",\r\n  \"end_time\": \"2025-12-09T21:00:00Z\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/showtimes",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"showtimes"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Dec 2025 09:58:24 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "128"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 3,\n    \"movie_id\": 1,\n    \"auditorium_id\": 1,\n    \"start_time\": \"2025-12-09T18:00:00Z\",\n    \"end_time\": \"2025-12-09T21:00:00Z\",\n    \"status\": \"active\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Put Showtimes",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU1MzI5ODMsInVzZXJfaWQiOjF9.Bpdq1pxE0P_4F24oz6Pe5PNJ40GWSAwn4757Y47WM4w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"movie_id\": 1,\r\n  \"auditorium_id\": 1,\r\n  \"start_time\": \"2025-12-09T18:00:00Z\",\r\n  \"end_time\": \"2025-12-09T21:00:00Z\",\r\n  \"status\": \"inactive\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/showtimes/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"showtimes",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Put Showtimes",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU1MzI5ODMsInVzZXJfaWQiOjF9.Bpdq1pxE0P_4F24oz6Pe5PNJ40GWSAwn4757Y47WM4w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"movie_id\": 1,\r\n  \"auditorium_id\": 1,\r\n  \"start_time\": \"2025-12-09T18:00:00Z\",\r\n  \"end_time\": \"2025-12-09T21:00:00Z\",\r\n  \"status\": \"inactive\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/showtimes/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"showtimes",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Dec 2025 10:01:02 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "130"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 0,\n    \"movie_id\": 1,\n    \"auditorium_id\": 1,\n    \"start_time\": \"2025-12-09T18:00:00Z\",\n    \"end_time\": \"2025-12-09T21:00:00Z\",\n    \"status\": \"inactive\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Delete Showtimes",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU1MzI5ODMsInVzZXJfaWQiOjF9.Bpdq1pxE0P_4F24oz6Pe5PNJ40GWSAwn4757Y47WM4w",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/showtimes/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"showtimes",
+						"3"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Delete Showtimes",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3NjU1MzI5ODMsInVzZXJfaWQiOjF9.Bpdq1pxE0P_4F24oz6Pe5PNJ40GWSAwn4757Y47WM4w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/showtimes/3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"showtimes",
+								"3"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": null,
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Tue, 09 Dec 2025 10:02:14 GMT"
+						},
+						{
+							"key": "Content-Length",
+							"value": "22"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"deleted\"\n}"
+				}
+			]
+		}
+	]
+}
