@@ -14,7 +14,7 @@ var DB *sqlx.DB
 
 func ConnectDB(){
 	err := godotenv.Load()
-	if (err != nil){
+	if (err != nil) {
 		log.Fatal("Error loading .env file")
 	}
 
@@ -29,7 +29,7 @@ func ConnectDB(){
 	)
 
 	DB, err = sqlx.Connect("postgres", dsn)
-	if (err != nil){
+	if (err != nil) {
 		log.Fatal("DB Connection Failed", err)
 	}
 
