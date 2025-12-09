@@ -68,7 +68,7 @@ go mod tidy
 
 Pastikan .env sudah dibuat sesuai .env.example dan db telah dibuat/jalankan script dibawah:
 
-![DB Script](./assets/script.sql)
+[DB Script](./assets/script.sql)
 
 ```bash
 go run main.go
