@@ -66,7 +66,9 @@ go mod tidy
 
 ### 3️⃣ Jalankan Project
 
-Pastikan .env sudah dibuat sesuai .env.example:
+Pastikan .env sudah dibuat sesuai .env.example dan db telah dibuat/jalankan script dibawah:
+
+![DB Script](./assets/script.sql)
 
 ```bash
 go run main.go
